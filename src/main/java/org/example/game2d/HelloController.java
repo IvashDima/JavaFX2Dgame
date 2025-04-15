@@ -23,7 +23,7 @@ public class HelloController {
     private ImageView bg1, bg2, player, enemy;
 
     @FXML
-    private Label labelPause;
+    private Label labelPause, labelGameOver;
 
     private final int BG_WIDTH = 782;
 
@@ -64,6 +64,14 @@ public class HelloController {
                 jumpDownSpeed = 5;
                 parallelTransition.play();
                 enemyTransition.play();
+            }
+
+            if(player.getBoundsInParent().intersects(enemy.getBoundsInParent())){
+                labelGameOver.setVisible(true);
+                playerSpeed = 0;
+                jumpDownSpeed = 0;
+                parallelTransition.pause();
+                enemyTransition.pause();
             }
         }
     };

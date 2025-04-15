@@ -19,7 +19,7 @@
             <Image url="@../../../images/background.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="player" fitHeight="150.0" fitWidth="200.0" layoutX="-6.0" layoutY="313.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="player" fitHeight="150.0" fitWidth="200.0" layoutX="4.0" layoutY="311.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/player.png" />
          </image>
@@ -30,6 +30,11 @@
          </image>
       </ImageView>
       <Label fx:id="labelPause" focusTraversable="false" layoutX="134.0" layoutY="174.0" prefHeight="128.0" prefWidth="488.0" text="-= PAUSE =-" textFill="#03ff34" visible="false">
+         <font>
+            <Font name="Comic Sans MS Bold" size="72.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelGameOver" focusTraversable="false" layoutX="53.0" layoutY="151.0" prefHeight="128.0" prefWidth="736.0" text="-= GAME OVER =-" textFill="#f20404" visible="false">
          <font>
             <Font name="Comic Sans MS Bold" size="72.0" />
          </font>
