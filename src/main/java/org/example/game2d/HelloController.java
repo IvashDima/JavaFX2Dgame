@@ -19,7 +19,7 @@ public class HelloController {
     private URL location;
 
     @FXML
-    private ImageView bg1, bg2, player;
+    private ImageView bg1, bg2, player, enemy;
 
     private final int BG_WIDTH = 782;
 
@@ -60,6 +60,14 @@ public class HelloController {
         bgTwoTransition.setFromX(0);
         bgTwoTransition.setToX(BG_WIDTH * -1);
         bgTwoTransition.setInterpolator(Interpolator.LINEAR);
+
+        TranslateTransition enemyTransition = new TranslateTransition(Duration.millis(4000), enemy);
+        enemyTransition.setFromX(0);
+        enemyTransition.setToX(BG_WIDTH * -1 - 300);
+        enemyTransition.setInterpolator(Interpolator.LINEAR);
+        enemyTransition.setCycleCount(Animation.INDEFINITE);
+        enemyTransition.play();
+
 
         parallelTransition = new ParallelTransition(bgOneTransition, bgTwoTransition);
         parallelTransition.setCycleCount(Animation.INDEFINITE);

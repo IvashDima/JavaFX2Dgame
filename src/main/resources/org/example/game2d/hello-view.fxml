@@ -22,5 +22,10 @@
             <Image url="@../../../images/player.png" />
          </image>
       </ImageView>
+      <ImageView fx:id="enemy" fitHeight="62.0" fitWidth="76.0" layoutX="1021.0" layoutY="399.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/enemy-bomb-evil.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
